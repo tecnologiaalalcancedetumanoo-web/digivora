@@ -13,6 +13,8 @@ import { MiCuenta } from "@/pages/MiCuenta";
 import { AdminDashboard } from "@/pages/AdminDashboard";
 import { Promociones } from "@/pages/Promociones";
 import { Ayuda } from "@/pages/Ayuda";
+import { RecuperarPassword } from "@/pages/RecuperarPassword";
+import { RestablecerPassword } from "@/pages/RestablecerPassword";
 
 export default function App() {
   return (
@@ -29,6 +31,8 @@ export default function App() {
               <Route path="ayuda" element={<Ayuda />} />
               <Route path="login" element={<Login />} />
               <Route path="registro" element={<Registro />} />
+              <Route path="recuperar-password" element={<RecuperarPassword />} />
+              <Route path="restablecer-password" element={<RestablecerPassword />} />
 
               <Route element={<ProtectedRoute />}>
                 <Route path="mi-cuenta" element={<MiCuenta />} />

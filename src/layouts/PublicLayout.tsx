@@ -9,7 +9,7 @@ export function PublicLayout() {
         <Outlet />
       </main>
       <footer className="border-t border-slate-200 bg-white py-6 text-center text-sm text-slate-400">
-        © {new Date().getFullYear()} Servicios Digitales. Todos los derechos reservados.
+        © {new Date().getFullYear()} DigiVora. Todos los derechos reservados.
       </footer>
     </div>
   );

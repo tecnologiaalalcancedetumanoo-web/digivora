@@ -15,6 +15,8 @@ import { Promociones } from "@/pages/Promociones";
 import { Ayuda } from "@/pages/Ayuda";
 import { RecuperarPassword } from "@/pages/RecuperarPassword";
 import { RestablecerPassword } from "@/pages/RestablecerPassword";
+import { Checkout } from "@/pages/Checkout";
+import { PedidoConfirmado } from "@/pages/PedidoConfirmado";
 
 export default function App() {
   return (
@@ -36,6 +38,8 @@ export default function App() {
 
               <Route element={<ProtectedRoute />}>
                 <Route path="mi-cuenta" element={<MiCuenta />} />
+                <Route path="checkout" element={<Checkout />} />
+                <Route path="pedido/:orderNumber" element={<PedidoConfirmado />} />
               </Route>
 
               <Route element={<ProtectedRoute adminOnly />}>

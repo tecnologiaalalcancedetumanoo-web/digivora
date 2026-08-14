@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply text-slate-900;
+}
+
+body {
+  @apply bg-white antialiased;
+}
+
+/* Fondo oscuro reutilizable para secciones "premium" (hero, header) */
+.digivora-dark-surface {
+  background-color: #0a0f24;
+  background-image: radial-gradient(circle at 30% 20%, rgba(47,92,255,0.35), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(139,92,246,0.3), transparent 45%),
+    radial-gradient(circle at 60% 80%, rgba(217,70,239,0.25), transparent 45%);
+}
+
+.text-gradient-brand {
+  @apply bg-digivora-gradient bg-clip-text text-transparent;
+}
+
+.btn-glow {
+  box-shadow: 0 0 0 rgba(139, 92, 246, 0);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.55);
+  transform: translateY(-1px);
+}
+
+/* Scrollbar horizontal discreto para categorías en móvil */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
